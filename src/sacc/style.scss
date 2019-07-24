@@ -1,0 +1,45 @@
+//变量使用
+$w:1200px;
+$color:#3399FF;
+//引用重置样式  示列
+@import"another.scss";
+.box{
+    width: $w/4;
+    height: 400px;
+    background: $color;
+    div{
+        width: 200px;
+        height: 200px;
+        background: red;
+        span{
+            display: inline-block;
+            width: 50px;
+            height:50px;
+            background: yellow;
+        }
+    }
+}
+//定义混合器，复用代码片段   示列
+@mixin box{
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+.test1{
+    @include box;
+    width: 200px;
+    height: 200px;
+}
+.test2{
+    @include box;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+//继承 复用
+.test3{
+    @extend.test2;
+    font-size: 12px;
+}

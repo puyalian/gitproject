@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表</title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.buy{
+				width: 200px;
+				height: 300px;
+				border: 1px solid #CCCCCC;
+				padding: 30px;
+			}
+			.buy img{
+				width: 180px;
+				height: 230px;
+				
+			}
+			.add{
+				width: 100px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				border: 1px solid;
+			}
+			.sidebar{
+				width: 100px;
+				height: 100%;
+				background: #000000;
+				position: fixed;
+				top: 0;
+				right: 0;
+			}
+			.cart{
+				width: 50px;
+				height: 50px;
+				background: white;
+				position: absolute;
+				top: 100px;
+				right: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="cart.html">查看购物车</a>
+		<h1>商品推荐</h1>
+		<div class="box"></div>
+		<div class="sidebar">
+			<div class="cart">购物车</div>
+		</div>
+		<div class="template" style="display: none;">
+			<img class="img" src="../images/1.jpg"/>
+			<div class="desc">苹果6</div>
+			<div class="price">2169</div>
+			<div class="id" style="display: none;">1</div>
+			<div class="add">加入购物车</div>
+		</div>
+		<script src="../lib/jquery/jquery-1.12.4.min.js"></script>
+		<script src="../lib/jquery-plugins/jquery.cookie.js"></script>
+		<script src="../lib/jquery-plugins/jquery.fly.js"></script>
+		<script src="../js/list.js"></script>
+	</body>
+</html>
